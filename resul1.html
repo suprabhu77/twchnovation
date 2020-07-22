@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+   
+    alert("hello");
+    var C=localStorage.getItem("CGPA1");
+    alert(C)
+    document.getElementById("demo").innerHTML= C;
+   
+
+</script>
+<style>
+    #result{
+        font-size: 16px;
+  padding: 10px;
+  text-align: center;
+  background-color: #4CAF50;
+  color: white;
+  border: solid 1px #a6d8a8;
+  margin: auto;
+  display: inline-block;
+  text-align: center;
+    
+    }
+    #fname{
+      margin: 4px 0;
+      box-sizing: border-box;
+      border: none;
+      background-color: #67ecbc;
+      color:black;
+      height: 30px;
+      text-align: center;
+      border-radius: 5px;
+    }
+    .result{
+        margin: 4px 0;
+      box-sizing: border-box;
+      border: none;
+      background-color: #67ecbc;
+      color:black;
+      height: 30px;
+      text-shadow: black;
+      text-align: center;
+      padding: 10px;
+      text-decoration: solid;
+      width: 150px;
+    }
+    th{
+        color: black;
+    }
+</style>
+<body>
+    <center>
+     <div>
+         <h1 style="color: blue;">RESULT</h1>
+     </div>
+    <div >
+         <div>
+          </div>
+        <div id="result" >
+            <center>
+            <table>
+                <tr>
+                    <th>CGPA:</th>
+                    <th> <p class="result" id="res"></p></th>
+                </tr>
+                <tr>
+                    <th>GRADE:</th>
+                    <th> <p class="result" id="res2"></p></th>
+                </tr>
+                <tr>
+                    <th>STATUS:</th>
+                    <th><p class="result" id="res3"></p></th>
+                </tr>
+            </table>  
+        </center>
+            
+        </div>
+       
+     </div>
+    </center> 
+</body>
+</html

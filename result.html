@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function func()
+    {
+    var gpa1 = localStorage.getItem("categ1");
+    var gpa2 = localStorage.getItem("categ2");
+    var gpa3 = localStorage.getItem("categ3");
+    var gpa4 = localStorage.getItem("categ4");
+    var gpa5 = localStorage.getItem("categ5");
+    var gpa6 = localStorage.getItem("categ6");
+    var gpa7 = localStorage.getItem("categ7");
+    let KAWGP = Number(3600) +  Number(gpa2) + Number(gpa3) + Number(gpa4)+ Number(gpa5)+ Number(gpa6)+ Number(gpa7);
+    console.log(KAWGP);
+    var CGPA =  (KAWGP / 1000).toFixed(3);
+    console.log(CGPA);
+    document.getElementById("res").innerHTML=CGPA;
+    if (CGPA > 1.5)
+     {
+    if (CGPA > 3.5) {
+      document.getElementById("res2").innerHTML="A++"
+    } else if (CGPA > 3.25) {
+        document.getElementById("res2").innerHTML="A+";
+    } else if (CGPA > 3) {
+        document.getElementById("res2").innerHTML="A"
+    } else if (CGPA > 2.75) {
+        document.getElementById("res2").innerHTML="B++"
+    } else if (CGPA > 2.5) {
+        document.getElementById("res2").innerHTML="B+"
+    } else if (CGPA > 2) {
+        document.getElementById("res2").innerHTML= "B";
+    } else if (CGPA > 1.5) {
+        document.getElementById("res2").innerHTML ="C";
+    }
+    document.getElementById("res3").innerHTML="Acredited";
+    } 
+    else {
+        document.getElementById("res3").innerHTML=" not Acredited";
+   }
+    document.getElementById("result").style.display = "block";
+    }
+
+</script>
+<style>
+    #result{
+        font-size: 16px;
+  padding: 10px;
+  text-align: center;
+  background-color: #4CAF50;
+  color: white;
+  border: solid 1px #a6d8a8;
+  margin: auto;
+  display: inline-block;
+  text-align: center;
+    
+    }
+    #result{
+        display: none;
+    }
+    #fname{
+      margin: 4px 0;
+      box-sizing: border-box;
+      border: none;
+      background-color: #67ecbc;
+      color:black;
+      height: 30px;
+      text-align: center;
+      border-radius: 5px;
+    }
+    .result{
+        margin: 4px 0;
+      box-sizing: border-box;
+      border: none;
+      background-color: #67ecbc;
+      color:black;
+      height: 30px;
+      text-align: left: ;
+      text-decoration: solid;
+      width: 60px;
+    }
+    th{
+        color: black;
+    }
+</style>
+<body>
+    <center>
+     <div>
+         <h1 style="color: blue;">RESULT</h1>
+     </div>
+    <div >
+         <div>
+            <p id="fname" onclick="func()">Click to show the result</p>
+          </div>
+        <div id="result" >
+            <center>
+            <table>
+                <tr>
+                    <th>CGPA:</th>
+                    <th> <p class="result" id="res"></p></th>
+                </tr>
+                <tr>
+                    <th>GRADE:</th>
+                    <th> <p class="result" id="res2"></p></th>
+                </tr>
+                <tr>
+                    <th>STATUS:</th>
+                    <th> <p class="result" id="res3"></p></th>
+                </tr>
+            </table>  
+        </center>
+            
+        </div>
+       
+     </div>
+    </center> 
+</body>
+</html

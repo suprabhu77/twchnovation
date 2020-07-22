@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function myFunction() {
+     var Ca = Number(document.getElementById("t1").value);
+     console.log(Ca);
+     var Cb = Number(document.getElementById("t2").value);
+     var Cc = Number(document.getElementById("t3").value);
+     var Cd = Number(document.getElementById("t4").value);
+     if((Ca&&Cb&&Cc&&Cd)=='0'){
+        alert ("Invalid input or Enter the key wthin 0-4");
+     }
+     var res1=30*Ca;
+     var res2=20*Cb;
+     var res3=30*Cc;
+     var res4=20*Cd;
+     document.getElementById("t8").innerHTML= res1;
+     document.getElementById("t9").innerHTML= res2;
+     document.getElementById("t10").innerHTML= res3;
+     document.getElementById("t11").innerHTML= res4;
+     console.log(res1);
+     var total = res1+res2+res3+res4;
+     localStorage.setItem("categ4",total);
+                          }
+</script>
+<style>
+
+.header{
+    width: 100%;
+    height: 80px;
+    background-color: blanchedalmond;
+    margin:auto;
+      }
+    body{
+        background-color: #78fce6;
+    }
+    header{
+        margin: auto;
+        background-color: tomato;
+        text-align: center;
+        background-image: linear-gradient(to right, rgb(236, 213, 213) , rgb(230, 45, 69));
+    }
+    #t01{
+     background-color: rgb(177, 255, 232);
+    
+        }
+    .table{
+        margin: 80px;
+
+        }
+    h1{
+        text-align: center;
+        padding: 20px;
+        color: blueviolet;
+    }
+    .result{
+        border-style: solid;
+        border-color: green;
+        background-color: rgb(177, 255, 232);color:rgb(43, 29, 243);padding:30px;width: 900px;text-align: center;inset-inline-start: 20px;
+    }
+    .header{
+        background-image: linear-gradient( rgb(245, 79, 79) , rgb(238, 172, 181));
+    }
+    li {
+  display: inline;
+  font-size: 20px;
+}
+.res1{
+        border-bottom: 2px solid black;
+        border:  2px solid black;
+        float: right;
+        margin-left: 390px;
+        font-size: 25px;
+        
+    }
+    .res2{
+        border-bottom: 2px solid black;
+        border:  2px solid black;
+        float: left;
+        margin-right: 390px;
+        font-size: 25px;
+    }
+    ul {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+       overflow: hidden;
+}
+    li a:hover {
+       background-color: rgb(97, 199, 247);
+     }
+    li a{
+      display: inline-block;
+       color: rgb(15, 3, 3);
+     }
+input[type=text] {
+      margin: 4px 0;
+      box-sizing: border-box;
+      border: none;
+      background-color: #67ecbc;
+      color:black;
+      height: 30px;
+      border-radius: 5px;
+    }
+    input[name=box] {
+      margin: 4px 0;
+      box-sizing: border-box;
+      border: none;
+      background-color: #67ecbc;
+      color:black;
+      height: 30px;
+      border-radius: 5px;
+    }
+
+</style>
+<body>
+    <header></header> 
+        
+    <div class="header"> <h1>INFRASTRUCTURE AND LEARNING RESOURCES</h1></div>
+    <div class="table">
+        <center>
+        <table id="t01" border="11" cellspacing="0" cellpadding=10>
+               <tr>
+                  
+                  <th> <h3> Sl no</h3>
+                       <th> <h3> Criteria & Key Indicators  </h3></th>
+                       <th> <h3> Key Indicator Weight Age  </h3></th>
+                       <th><h3> Key Indicator Grade Points </h3></th>
+                       <th><h3> Key indicator Weighted Grade Points </h3></th>
+               </tr>
+               <tr>
+                  
+                  <th> <h4> 1</h4>
+                       <th> <p> Physicaly Facilities  </p></th>
+                       <th> <p> 30  <p></th>
+                       <th><input name="box" id = "t1" placeholder="Enter the key indicator" ></th>
+                       <th><p id = "t8"></p></p></th>  > </p></th>
+               </tr>
+               <tr>
+                  
+                  <th> <h4> 2</h4>
+                       <th> <p>Library as a Learning Resource3</p></th>
+                       <th> <p> 20  <p></th>
+                       <th><input name="box" id = "t2" placeholder="Enter the key indicator"  ></th>
+                       <th><p id = "t9"></p></p></th>
+               </tr>
+               <tr>
+                  
+                  <th> <h4> 3</h4>
+                       <th> <p> IT Infrastructure</p></th>
+                       <th> <p> 30  <p></th>
+                       <th><input name="box" id = "t3" placeholder="Enter the key indicator"  ></th>
+                       <th><p id = "t10"></p></p></th>
+               </tr>
+               <tr>
+                  
+                  <th> <h4> 4</h4>
+                       <th> <p> Maintenance of Campus Infrastructure</p></th>
+                       <th> <p> 20  <p></th>
+                       <th><input  name="box" id = "t4" placeholder="Enter the key indicator" ></th>
+                       <th><p id = "t11"></p></p></th>
+               </tr>
+               <tr>
+                  
+                <th> <h4> </h4>
+                     <th> <p> </p></th>
+                     <th> <p> Total 100  <p></th>
+                     <th></th>
+                     <th> <p style=" background-image: linear-gradient( rgb(245, 79, 79) , rgb(238, 172, 181));height: 30px;text-align:centerq;" onclick="myFunction()">Click to show the result</p></th>
+                     
+             </tr>
+
+
+        </table>
+        <br>
+        <div class="result">
+            <div id="result">
+                <ul>
+                   <li class="res1" ><a href="tech5.html">Next</a></li>
+                   <li class="res2" ><a href="tech3.html">Back</a></li>
+                 </ul>
+           </div>
+           
+         </div>   
+      </center>
+    </div>  
+     
+</body>
+</html>
